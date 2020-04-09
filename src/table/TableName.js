@@ -18,18 +18,26 @@ export default class TableName extends Component (prop) {
     {
       fname: 'fameeeeeee',
       lname: 'bt'
-    },
+    }
   ])
   const [unit, setUnit] = useState()
   const [status, setStatus] = useState()
-  const [edit, setEdit] = useState()
+  const [edit, setEdit] = useState(
+    {
+      view: 'view'
+    }
+  )
 
   render(){
 
   return (
     <>
+    <Sidebar/>
+     <Container>
       <Table>
+       
 
+        
         <thead>
           <tr>
             <th>Name</th>
@@ -49,7 +57,7 @@ export default class TableName extends Component (prop) {
                 <td>
                   <Dropdown />
                 </td>
-                <td><a href={() => setEdit("/beauty")}>{edit}</a></td>
+                <td><a href="/beauty">{data.view}</a></td>
               </tr>
             )
           }
@@ -58,7 +66,7 @@ export default class TableName extends Component (prop) {
           )}
         </tbody>
       </Table>
-
+</Container>
     </>
   )
 
